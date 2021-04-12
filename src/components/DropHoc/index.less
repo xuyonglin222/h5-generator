@@ -1,0 +1,27 @@
+.drop-box {
+  & + .toolbox {
+    margin-left: 10px;
+    border: 1px solid black;
+    width: 30px;
+    height: 80px;
+  }
+}
+
+.delete-container {
+  width: 100px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  .delete-btn {
+    &:hover {
+      cursor: pointer;
+    }
+    position: absolute;
+    bottom: 0;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+}

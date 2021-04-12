@@ -1,0 +1,183 @@
+/** 
+ * Customize Ant Design Theme.
+ *
+ * This file contains overrides the default Ant theme.
+ *
+ */
+
+/* ---------------- top bar ---------------- */
+
+/* add shadow to topbar */
+.ant-layout-header {
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  z-index: 1;
+}
+
+/* ---------------- side menu ----------------
+
+/* use custom font */
+.ant-menu {
+  font-family: inherit;
+  padding-top: 16px;
+}
+
+/* sider is at least as tall as screen */
+.ant-layout-sider {
+  min-height: 100vh;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  position: relative;
+  z-index: 10;
+}
+
+/* change side BG color */
+/* .ant-layout-sider, .ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+    background: #1c1b1b;
+    color: rgba(255, 255, 255, 1);
+} */
+
+/* allow animation on level2 menu */
+.ant-menu .ant-menu-item {
+  position: relative !important;
+  transition: all 300ms;
+}
+
+/* add arrow */
+/* .ant-menu .ant-menu-item::after {
+    content: ">";
+    font-size: 12px;
+    transform: scaleY(1.5);
+    font-family: "anticon" !important;
+    padding-right: 26px;
+    opacity: 0;
+    transition: all 300ms;
+} */
+
+/* hover: animate a bit to right */
+.ant-menu .ant-menu-item:hover {
+  text-indent: 3px;
+}
+
+/* active: change BG color */
+/* .ant-menu .ant-menu-item-selected, .ant-menu-submenu-popup .ant-menu-item-selected {
+    background-color: transparent !important;
+    color: #6cc6fd !important;
+}
+.ant-menu .ant-menu-item-selected::after {
+    padding-right: 20px;
+    opacity: 1;
+} */
+
+/* ---------------- dropdown ---------------- */
+
+/* hover: change BG color */
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-item-active,
+.ant-dropdown-menu-submenu-title:hover {
+  background-color: #d8f9fc;
+}
+
+/* -------------------- card -------------------- */
+
+/* custom chart card (normal card with no header), make font thicker */
+.custom-chart-card {
+  font-weight: 500;
+}
+
+/* custom chart card (normal card with no header), add more white padding */
+.custom-chart-card .ant-card-body {
+  padding-top: 30px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  padding-bottom: 16px !important;
+}
+
+/* ---------------- ant pro chart ---------------- */
+
+/* lower graph position so it feels good to the eyes */
+.antd-pro-charts-miniChart .antd-pro-charts-chartContent {
+  bottom: -36px;
+}
+
+/* make card gray title bigger */
+.antd-pro-charts--chart-card-chartCard .antd-pro-charts--chart-card-meta {
+  font-size: 18px;
+}
+
+/* make big number in the middle of card thicker */
+.antd-pro-charts--chart-card-chartCard .antd-pro-charts--chart-card-total {
+  font-weight: 700;
+  font-size: 36px;
+  margin-top: 14px;
+}
+
+/* make card footer taller */
+.antd-pro-charts--chart-card-chartCard .antd-pro-charts--chart-card-footer {
+  padding-top: 18px;
+  padding-bottom: 4px;
+}
+
+/* -------------------- avatar -------------------- */
+
+/* .ant-avatar-lg{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.ant-avatar > img {
+    height: auto;
+} */
+
+/* -------------------- input -------------------- */
+
+textarea.ant-input {
+  padding: 8px;
+  padding-left: 10px;
+}
+
+/* make red error message have a bit of gap from above and bottom */
+.has-error .ant-form-explain,
+.has-error .ant-form-split {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+/* -------------------- modal -------------------- */
+
+/* body: break word */
+.ant-confirm-body .ant-confirm-content {
+  word-break: break-all;
+}
+
+/* -------------------- button -------------------- */
+.ant-btn.green {
+  background-color: #0cbe00;
+  border-color: #0cbe00 !important;
+  border-right-color: #0cbe00 !important;
+}
+.ant-btn.green:hover {
+  background-color: #0cbe00bb;
+  border-color: #0cbe00bb !important;
+  border-right-color: #0cbe00bb !important;
+}
+.ant-btn.green[disabled] {
+  color: white;
+  opacity: 0.4;
+}
+
+.ant-btn.red {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+  color: white;
+}
+.ant-btn.red:hover {
+  background-color: #ff7d7f;
+  border-color: #ff7d7f !important;
+  border-right-color: #ff7d7f !important;
+}
+
+.ant-btn.ant-btn-danger {
+}
+.ant-checkbox-group-item {
+  margin-right: 20px;
+}

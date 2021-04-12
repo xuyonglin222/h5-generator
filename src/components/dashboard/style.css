@@ -1,0 +1,111 @@
+.dashboard {
+  transition: 300ms ease all;
+}
+
+.dashboard .trigger {
+  font-size: 20px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.dashboard .trigger:hover {
+  color: #1890ff;
+}
+
+.dashboard .logo {
+  height: 64px;
+  line-height: 64px;
+  position: relative;
+  padding-left: 24px;
+  transition: all 0.3s;
+  overflow: hidden;
+  background-color: #002140;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 1;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.dashboard .logo img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  animation: bounceIn 0.6s;
+  transform: rotate(0deg) scale(1) translateZ(0);
+  transition: all 0.4s cubic-bezier(0.8, 1.8, 0.75, 0.75);
+}
+.dashboard .logo img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.dashboard .logo .text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  margin-left: 12px;
+}
+
+.dashboard .header-right {
+  float: right;
+  height: 100%;
+}
+
+.dashboard .header-right .account {
+  float: right;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+.dashboard .header-right .account .pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 100px;
+  margin-right: 8px;
+}
+
+.dashboard .header-right .account .text {
+  font-size: 14px;
+}
+
+.dashboard .header-right .account .click-to-login {
+  font-size: 14px;
+  padding-right: 6px;
+}
+
+.dashboard .header-right .account .anticon-down {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.dashboard .ant-layout-content {
+  flex: 1;
+  position: relative;
+}
+
+/* .dashboard .ant-layout-content > *{
+    width: 100%;
+    height: 100%;
+} */

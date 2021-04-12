@@ -1,0 +1,308 @@
+/**
+ *  BLACK: #1c1b1b
+ *  LIGHT GRAY: #dfdfe0
+ *  BLUE: #42c5d8
+ */
+
+html,
+body {
+  color: #1c1b1b;
+}
+
+html {
+  /* remove click delay */
+  touch-action: manipulation;
+  /* disable long press popup on iOS, however doesnt work in iOS 8 as they have a bug */
+  -webkit-touch-callout: none;
+  /* other stuff */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI,
+    PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:hover,
+*:focus {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input,
+textarea,
+keygen,
+select,
+button {
+  font-weight: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+/* remove inset shadow on iOS */
+textarea,
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* fix disabled input's text being light gray on iOS, its color should be the same as normal input */
+input[disabled],
+textarea[disabled] {
+  -webkit-opacity: 1;
+  opacity: 1;
+  -webkit-text-fill-color: inherit;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+a:active,
+a:hover,
+a:focus,
+a:visited {
+  outline: 0;
+  text-decoration: none;
+}
+
+*::-webkit-input-placeholder {
+  opacity: 1;
+  font-weight: inherit;
+  color: #aaaaaa;
+  -webkit-text-fill-color: #aaaaaa;
+} /* on safari/iOS, we need to set placeholder's -webkit-text-fill-color, otherwise its black because on input[disabled] we set it to inherit */
+*::-moz-placeholder {
+  opacity: 1;
+  font-weight: inherit;
+  color: #aaaaaa;
+}
+*:-moz-placeholder {
+  opacity: 1;
+  font-weight: inherit;
+  color: #aaaaaa;
+}
+*:-ms-input-placeholder {
+  opacity: 1;
+  font-weight: inherit;
+  color: #aaaaaa;
+}
+
+::-moz-selection {
+  background: #b5e5ff;
+  color: #282828;
+}
+::selection {
+  background: #b5eeff;
+  color: #282828;
+}
+
+*[data-show="false"] {
+  display: none;
+}
+
+*[data-showv="false"] {
+  visibility: hidden;
+}
+
+.center-cropped {
+  /* for background-image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.center-contained {
+  /* for background-image */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.disable-all-animation,
+.disable-all-animation:before,
+.disable-all-animation:after,
+.disable-all-animation * {
+  transition-property: none !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.unselectable,
+.unselectable * {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* --------------- animate.css helpers --------------- */
+.animate_duration_2000 {
+  animation-duration: 2s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_1500 {
+  animation-duration: 1.5s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_1200 {
+  animation-duration: 1.2s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_1000 {
+  animation-duration: 1s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_600 {
+  animation-duration: 0.6s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_500 {
+  animation-duration: 0.5s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_400 {
+  animation-duration: 0.4s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_300 {
+  animation-duration: 0.3s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_200 {
+  animation-duration: 0.2s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_150 {
+  animation-duration: 0.15s !important;
+  transform: translate3d(0, 0, 0);
+}
+.animate_duration_100 {
+  animation-duration: 0.1s !important;
+  transform: translate3d(0, 0, 0);
+}
+
+/* --------------- form --------------- */
+.ui-form {
+  max-width: 300px;
+}
+
+.ui-form-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  display: block;
+  font-variant: tabular-nums;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.ui-form-item-label {
+  display: inline-block;
+  font-weight: 600;
+  padding-right: 20px;
+  width: 20%;
+  flex: 1;
+}
+
+.ui-input {
+  display: inline-block;
+  list-style: none;
+  outline: 0;
+  padding: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border: 1px solid #dfdfe0;
+  border-radius: 0px;
+  background-image: none;
+  transition: border-color 400ms;
+  font-size: 14px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.ui-input:focus {
+  border-color: #0daedf;
+  outline: 0;
+}
+
+input.ui-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+/* --------------- button --------------- */
+button.ui-btn {
+  text-align: center;
+  background: linear-gradient(to bottom, #27272e 0%, #101024 100%);
+  color: white;
+  font-weight: 700;
+  padding: 16px;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+select.ui-select {
+  border: 1px solid #e3e3e3;
+  border-radius: 0px;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 12px;
+  padding-right: 18px;
+  background-color: white;
+  cursor: pointer;
+}
