@@ -16,7 +16,7 @@ class PageListView extends Component {
   }
 
   openPage = id => {
-    window.open(`/app/editorpage?id=${id}`, "_blank");
+    window.open(`/app/page?id=${id}`, "_blank");
   };
 
   deletePage = id => {
@@ -101,7 +101,7 @@ class PageListView extends Component {
       >
         <Button
           onClick={() => {
-            window.open("/app/editorpage");
+            window.open("/app/page");
           }}
           style={{ marginBottom: 10 }}
         >

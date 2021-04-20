@@ -1,33 +1,50 @@
 import React, { PureComponent } from "react";
-// import AjaxProgressUI from 'ui/ajax-progress';
-import { history } from "stores";
-import "./style.css";
+import { Layout, Menu, Dropdown, Button, BackTop } from "antd";
+import {
+  Router,
+  Route,
+  browserHistory,
+  withRouter,
+  Redirect
+} from "react-router";
 
-/**
- * Wrapper around the entire application.
- *
- * Doing so has a number of benefits
- * 	- allowing you to detect React-Router URL change and store URL histories.
- *  - mount singleton components on the toppest level of hierarchy and allow
- *    other components to directly interact with them via their exposed API methods
- *
- */
+import PageList from "../PageList";
+import EditorPage from "../EditorPage";
+import OptionButtonGroup from "./optionButtonGroup";
+
+import "./index.less";
+
+const { Header, Sider, Content, Footer } = Layout;
 
 class App extends PureComponent {
-  // allow getting previous location with history.previousLocation
-  // componentWillReceiveProps(nextProps){
-  //     history.setLocations({ prev: this.props.location, curr: nextProps.location });
-  // }
-
   render() {
+    console.log("prpps", window.location.href);
     return (
-      <div className="app">
-        <div className="app-sys-noti" />
-        {/* <AjaxProgressUI /> */}
-        {this.props.children}
-      </div>
+      <Layout className="dashboard">
+        <BackTop />
+        <Header style={{ background: "#fff", display: "flex" }}>
+          {/* <Link to='/edit-page'>新增</Link> */}
+          <div className="logo">
+            <img
+              style={{ width: 50 }}
+              src="https://avatars.githubusercontent.com/u/23112531?v=4"
+              alt=""
+            />
+            <h2>庚庚的小玩意儿</h2>
+          </div>
+          {window.location.href.includes("/app/page") && <OptionButtonGroup />}
+        </Header>
+        <Content>
+          <Router history={browserHistory}>
+            <Redirect from="/" to="/app/list" />
+            <Route path="/app/list" component={PageList} />
+            <Route path="/app/page" component={EditorPage} />
+          </Router>
+        </Content>
+        <Footer style={{ textAlign: "center" }}>庚庚闹着玩</Footer>
+      </Layout>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

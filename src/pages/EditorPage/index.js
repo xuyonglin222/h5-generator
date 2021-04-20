@@ -4,8 +4,6 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import ComponentSet from "./ComponentSet";
 import PreviewBox from "./PreviewBox";
 import ConfigDrawer from "./ConfigDrawer";
-import OptionButtonGroup from "./optionButtonGroup";
-
 class EditorPage extends Component {
   componentDidMount() {
     // 收缩导航栏
@@ -25,7 +23,6 @@ class EditorPage extends Component {
           <PreviewBox />
           <ConfigDrawer />
         </div>
-        <OptionButtonGroup />
       </DndProvider>
     );
   }

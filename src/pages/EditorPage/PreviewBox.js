@@ -3,7 +3,7 @@ import { DropTarget } from "react-dnd";
 import { Form, Input } from "antd";
 import { observer, inject } from "mobx-react";
 import { toJS } from "mobx";
-import { history } from "stores";
+// import { history } from "stores";
 import componentMap from "library/ComponentLibary";
 import ScriptMap from "library/ScriptLibary";
 import DropHoc from "components/DropHoc";
@@ -48,8 +48,8 @@ import "./style.less";
 class PreviewBox extends Component {
   componentDidMount() {
     const { editor } = this.props;
-    const { id } = history.getQuery();
-    id && editor.open_page(id);
+    // const { id } = history.getQuery();
+    // id && editor.open_page(id);
   }
   render() {
     const { editor, connectDropTarget, form } = this.props;

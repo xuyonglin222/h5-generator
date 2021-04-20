@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { Spin } from 'antd';
 
 const AsyncComponent = load => {
   return class extends PureComponent {
@@ -16,7 +17,7 @@ const AsyncComponent = load => {
 
     render() {
       const Com = this.state.component;
-      return Com ? <Com {...this.props} /> : null;
+      return Com ? <Com {...this.props} /> : <Spin spinning>正在加载</Spin>;
     }
   };
 };

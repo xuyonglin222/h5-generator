@@ -13,7 +13,7 @@ class ConfigDrawer extends Component {
     const { configDrawerVisible } = editor || {};
     const DRAWER_WIDTH = 350;
     return (
-      <div style={{ width: DRAWER_WIDTH + "px" }}>
+      <div style={{}}>
         <Drawer
           // title="物料配置"
           placement="right"
@@ -23,8 +23,8 @@ class ConfigDrawer extends Component {
           maskClosable={false}
           getContainer={false}
           width={DRAWER_WIDTH}
-          style={{ position: "absolute", width: DRAWER_WIDTH + "px" }}
-          drawerStyle={{ width: DRAWER_WIDTH + "px" }}
+          // style={{ position: "absolute", width: DRAWER_WIDTH + "px" }}
+          // drawerStyle={{ width: DRAWER_WIDTH + "px" }}
         >
           <Tabs defaultActiveKey="content">
             <TabPane tab="物料配置" key="content">

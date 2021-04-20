@@ -263,7 +263,14 @@ module.exports = function(webpackEnv) {
       alias: {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-        "react-native": "react-native-web"
+        "react-native": "react-native-web",
+        components: path.resolve(__dirname, "../src/components"),
+        stores: path.resolve(__dirname, "../src/stores"),
+        pages: path.resolve(__dirname, "../src/pages"),
+        services: path.resolve(__dirname, "../src/services"),
+        ui: path.resolve(__dirname, "../src/ui"),
+        utils: path.resolve(__dirname, "../src/utils"),
+        library: path.resolve(__dirname, "../src/library")
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

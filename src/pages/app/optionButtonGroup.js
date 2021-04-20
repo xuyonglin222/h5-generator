@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import "./style.less";
 import qs from "querystring";
 import { observer, inject } from "mobx-react";
 // import { toJS } from "mobx";
-import { message } from "antd";
+import { message, Button } from "antd";
+
+import "./index.less";
+
 @inject("editor")
 @observer
-class ComponentSet extends Component {
+class OptionButtonGroup extends Component {
   submit = () => {
     const { editor } = this.props;
     const { page_id, page_name } = editor;
@@ -49,22 +51,19 @@ class ComponentSet extends Component {
 
   render() {
     return (
-      <div className="option-bottom">
-        <h2 style={{ padding: 10 }}>页面操作:</h2>
-        <div className="option-button-group">
-          <div onClick={this.submit} className="button">
-            保存页面
-          </div>
-          <div onClick={this.copy} className="button">
-            复制页面
-          </div>
-          <div onClick={this.showLink} className="button">
-            查看链接
-          </div>
-        </div>
+      <div className="option-top">
+        <Button onClick={this.submit} type="link" size="large">
+          保存页面
+        </Button>
+        <Button onClick={this.copy} type="link" size="large">
+          复制页面
+        </Button>
+        <Button onClick={this.showLink} type="link" size="large">
+          预览
+        </Button>
       </div>
     );
   }
 }
 
-export default ComponentSet;
+export default OptionButtonGroup;
